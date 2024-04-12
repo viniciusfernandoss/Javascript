@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 09</title>
+</head>
+<body>
+    <h1>Detector de Brasileiro</h1>
+    <h3>Qual país você nasceu?</h3>
+    <input type="text" id="pais">
+    <input type="button" value="DETECTAR" onclick="detector()">
+    <p id="nacionalidade"></p>
+
+    <script>
+        function detector() {
+            var pais = window.document.querySelector('input#pais').value.toUpperCase()
+            var resposta = window.document.querySelector('p#nacionalidade')
+            if (pais === 'BRASIL') {
+                resposta.innerHTML = 'Você é <strong>Brasileiro!!</strong>'
+            } else {
+                resposta.innerHTML = '<p>Você é <strong>Estrangeiro!!</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
